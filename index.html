@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>Transforme o Agro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #0D0D0D, #183118);
+            /* background-image: url(img/Vector.png); */
+            font-family: 'Inter', sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Changed to min-height */
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .date-location-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+            font-family: Plus Jakarta Sans;
+            color: white;
+            margin-bottom: 20px;
+            padding: 5px 20px;
+            border-radius: 30px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+        }
+
+        .date-location span {
+            color: #B4F238;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            align-self: stretch;
+        }
+
+        .highlight {
+            background: linear-gradient(0deg, #1A1A1A 0%, #1A1A1A 100%);
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.56);
+            border-radius: 16px;
+            border: 1px black solid;
+            padding: 12px 24px;
+            /* Combined padding */
+            text-align: center;
+            /* Center the text within the div */
+        }
+
+        .highlight span {
+            /* Style the text inside the highlight div */
+            color: #B4F238;
+            font-size: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            /* Added font family */
+            font-weight: 400;
+            line-height: 1;
+            /* Improved line-height */
+            display: block;
+        }
+
+        .futuro {
+            color: #B4F238;
+            font-size: 12px;
+            font-family: Plus Jakarta Sans;
+            font-weight: 400;
+            line-height: 10px;
+            word-wrap: break-word align
+        }
+
+        p {
+            font-size: 1rem;
+            color: #DCDCDC;
+            margin-bottom: 30px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-self: stretch;
+            width: 90%;
+            padding-left: 50px;
+            padding-right: 50px;
+
+        }
+
+        .form input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid transparent;
+            /* Borda transparente por padrão */
+            border-radius: 5px;
+            background: #1C1C1C;
+            color: #595959;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.7;
+            /* Simplificado para 1.7 (equivalente a 170%) */
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            /* Adicionado fallback de fonte */
+            word-wrap: break-word;
+            align-items: flex-start;
+            transition: border-color 0.3s ease;
+            /* Transição suave na cor da borda */
+            outline: none;
+            /* Remove a borda padrão do navegador em foco */
+            border-radius: var(--border-radius-lg, 16px);
+        }
+
+        .form input:focus {
+            border-color: #B4F238;
+            /* Borda verde quando em foco */
+        }
+
+        .form input::placeholder {
+            color: #888;
+        }
+
+        .form button {
+            padding: 15px;
+            border: none;
+            font-style: normal;
+            border-radius: var(--border-radius-lg, 16px);
+            background: var(--brand-primary-primary-main, #B4F238);
+            color: var(--neutral-neutral-900, #0D0D0D);
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            /* 150% */
+            letter-spacing: 0.15px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-family: "Plus Jakarta Sans";
+        }
+
+        .form button:hover {
+            background: var(--brand-primary-primary-main, #B4F238);
+        }
+
+        .slogan {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .slogan span {
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: 600;
+            display: inline;
+            /* Mantém os spans na mesma linha */
+            line-height: 1;
+            letter-spacing: -2px;
+            font-size: 75px;
+            /* Tamanho base da fonte (ajustado) */
+            color: #F5F5F5;
+            /* Cor base da fonte */
+        }
+
+        .slogan .transforme {
+            color: #B4F238;
+        }
+
+        .slogan .o-agro {
+            /* Estilo específico para "o agro" */
+            font-size: 75px;
+            /* Tamanho ligeiramente menor para "o agro" */
+
+        }
+
+        .highlight {
+            background: linear-gradient(0deg, #1A1A1A 0%, #1A1A1A 100%);
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.56);
+            border-radius: 16px;
+            border: 1px black solid;
+            padding: 12px 24px;
+            text-align: center;
+            display: block;
+            /* Important: Make it a block element */
+            margin-bottom: 20px;
+            /* Add some margin below */
+        }
+
+        .highlight .futuro-do-agro {
+            color: #B4F238;
+            font-size: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 400;
+            line-height: 1.5;
+            /* Improved line-height */
+            display: block;
+        }
+
+        .date-location-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            width: 100%;
+            /* Para ocupar a largura total do container pai, se necessário*/
+        }
+
+        .date {
+            color: #B4F238;
+            /* Usando o valor hexadecimal diretamente */
+            text-align: center;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26.86px;
+            word-wrap: break-word
+        }
+
+        .location-icon {
+            height: 56px;
+            width: 56px;
+            /* Tamanho corrigido para a largura, igual a altura */
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.56);
+        }
+
+        .location {
+            color: white;
+            font-size: 16px;
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 300;
+            line-height: 26.86px;
+            word-wrap: break-word
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="date-location-container">
+            <div class="date">28 de Janeiro de 2025</div>
+            <img class="location-icon" src="img/image 9.png" alt="Ícone de Localização">
+            <div class="location">São José dos Campos - SP</div>
+        </div>
+        <div class="highlight">
+            <span class="futuro-do-agro">O FUTURO DO AGRO COMEÇA AGORA</span>
+        </div>
+        <div class="slogan">
+            <span class="transforme">Transforme </span> <span class="o-agro">o agro</span>
+            <span> como nunca antes</span>
+        </div>
+        <div
+            style="width: 100%; text-align: center; color: #BCBCBC; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 400;   line-height: 24px; word-wrap: break-word">
+            Garanta sua participação! Confirme sua presença e <p>aproveite uma experiência inesquecível.</p>
+        </div>
+
+        <form class="form">
+            <input type="text" placeholder="Seu nome completo" aria-describedby="name-help" required>
+            <input type="email" placeholder="Seu melhor e-mail" aria-describedby="email-help" required>
+            <button type="submit">Confirmar presença</button>
+        </form>
+        </main>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = document.querySelector('input[type="text"]').value;
+            const email = document.querySelector('input[type="email"]').value;
+            if (name && email) {
+                alert('Presença confirmada!');
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        });
+    </script>
+</body>
+
+</html>
