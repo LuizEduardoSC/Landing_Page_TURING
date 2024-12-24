@@ -142,8 +142,18 @@
             font-family: "Plus Jakarta Sans";
         }
 
+
+
         .form button:hover {
             background: var(--brand-primary-primary-main, #B4F238);
+        }
+
+        .form button::after {
+            content: '→';
+            /* Conteúdo da seta */
+            font-size: 20px;
+            margin-left: 10px;
+            transition: margin-left 0.3s;
         }
 
         .slogan {
